@@ -1,6 +1,11 @@
 function loadMarkdown(file) {
     fetch(file)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
         .then(text => {
             document.getElementById('project-content').innerHTML = marked(text);
         })
