@@ -14,7 +14,7 @@ Bienvenido a mi portfolio. Aquí puedes ver algunos de mis proyectos destacados.
   <h3>Proyecto 1: Análisis de Sentimientos</h3>
   <img src="./assets/proyecto1.png" alt="Imagen del Proyecto 1" style="width: 100%; border-radius: 10px;">
   <p>Un análisis de sentimientos realizado con técnicas de machine learning.</p>
-  <a href="./proyectos/analisis-de-sentimientos.md" style="text-decoration: none; color: white; background-color: #007BFF; padding: 10px 15px; border-radius: 5px;">Ver Proyecto</a>
+  <a href="./IAPortfolio/proyectos/analisis-de-sentimientos.md" style="text-decoration: none; color: white; background-color: #007BFF; padding: 10px 15px; border-radius: 5px;">Ver Proyecto</a>
 </div>
 
 <!-- Carta Proyecto 2 -->
