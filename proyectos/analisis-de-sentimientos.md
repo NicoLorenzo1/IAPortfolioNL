@@ -11,7 +11,6 @@ Este proyecto consiste en la implementación de técnicas de machine learning pa
 
 Aquí puedes profundizar en los detalles del proyecto.
 
-![Imagen del Proyecto](../assets/proyecto1.png)
 
 ### Tecnologías usadas:
 - Python
