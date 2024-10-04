@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>¡Hola, soy Nicolas Lorenzo!</h1>
+        <p>Bienvenido a mi portfolio. Aquí puedes ver algunos de mis proyectos destacados.</p>
+    </header>
+
+    <main>
+        <div class="projects">
+            <!-- Aquí se agregarán los enlaces a los proyectos -->
+            <div class="project-card">
+                <h3>Proyecto 1: Análisis de Sentimientos</h3>
+                <button onclick="loadMarkdown('proyectos/proyecto1.md')">Ver Proyecto</button>
+            </div>
+            <div class="project-card">
+                <h3>Proyecto 2: Monitoreo de Aplicaciones</h3>
+                <button onclick="loadMarkdown('proyectos/proyecto2.md')">Ver Proyecto</button>
+            </div>
+            <div class="project-card">
+                <h3>Proyecto 3: Procesamiento de Imágenes</h3>
+                <button onclick="loadMarkdown('proyectos/proyecto3.md')">Ver Proyecto</button>
+            </div>
+        </div>
+
+        <div id="project-content">
+            <!-- Aquí se mostrará el contenido del archivo Markdown -->
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</body>
+</html>
