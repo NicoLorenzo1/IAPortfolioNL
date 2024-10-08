@@ -7,7 +7,9 @@ function loadMarkdown(file) {
             return response.text();
         })
         .then(text => {
-            document.getElementById('project-content').innerHTML = marked(text);
+            // Usar marked.parse para procesar el contenido Markdown
+            const htmlContent = marked.parse(text);
+            document.getElementById('project-content').innerHTML = htmlContent;
         })
         .catch(error => console.error('Error al cargar el archivo Markdown:', error));
 }

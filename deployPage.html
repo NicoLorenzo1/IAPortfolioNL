@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Detalles del Proyecto</h1>
+    </header>
+
+    <main>
+        <a href="index.html">Regresar</a>
+
+        <div id="project-content">
+            <!-- Aquí se mostrará el contenido del archivo Markdown -->
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        function loadMarkdown(file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    // Usar marked.parse para procesar el contenido Markdown
+                    const htmlContent = marked.parse(text);
+                    document.getElementById('project-content').innerHTML = htmlContent;
+                })
+                .catch(error => console.error('Error al cargar el archivo Markdown:', error));
+        }
+
+        // Obtener el parámetro de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const file = urlParams.get('file');
+
+        // Cargar el archivo Markdown si existe
+        if (file) {
+            loadMarkdown(file);
+        } else {
+            document.getElementById('project-content').innerHTML = '<p>No se encontró el archivo.</p>';
+        }
+    </script>
+</body>
+</html>
