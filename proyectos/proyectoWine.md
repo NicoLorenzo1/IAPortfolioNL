@@ -13,13 +13,13 @@ Este proyecto se centra en el análisis de un conjunto de datos de vinos, que in
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Descripción del Proyecto</span>
 
-El proyecto **"Wine Quality Analysis"** utiliza un conjunto de datos compuesto por diversas características químicas y físicas de vinos cultivados en diferentes regiones. El dataset consta de **178 registros**, cada uno representando muestras de vino con diferentes características, como el contenido de alcohol, la acidez, el magnesio, y más. Este análisis tiene como fin predecir el origen del vino y estudiar las propiedades que definen su calidad.
+El proyecto utiliza un conjunto de datos compuesto por diversas características químicas y físicas de vinos cultivados en diferentes regiones. El dataset consta de 178 registros, cada uno representando muestras de vino con diferentes características, como el contenido de alcohol, la acidez, el magnesio, y más. Este análisis tiene como fin predecir el origen del vino y estudiar las propiedades que definen su calidad.
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Objetivos</span>
 
-El objetivo principal de este proyecto es desarrollar modelos predictivos que permitan determinar el **origen** del vino en función de sus características químicas y físicas. A través del análisis de los datos, también buscamos identificar los factores más importantes que influyen en la **calidad del vino**. Esta información puede ser de gran utilidad para los enólogos, ya que les permite comprender mejor las propiedades que determinan la calidad de un buen vino.
+El objetivo principal de este proyecto es desarrollar modelos predictivos que permitan determinar el origen del vino en función de sus características químicas y físicas. A través del análisis de los datos, también buscamos identificar los factores más importantes que influyen en la calidad del vino. Esta información puede ser de gran utilidad para los enólogos, ya que les permite comprender mejor las propiedades que determinan la calidad de un buen vino.
 
-Además, el proyecto no solo busca proporcionar un modelo de clasificación para el origen del vino, sino que también busca contribuir al estudio de la **química del vino**, proporcionando información valiosa que podría ser utilizada en otras investigaciones del campo.
+Además, el proyecto no solo busca proporcionar un modelo de clasificación para el origen del vino, sino que también busca contribuir al estudio de la química del vino, proporcionando información valiosa que podría ser utilizada en otras investigaciones del campo.
 
 ---
 
