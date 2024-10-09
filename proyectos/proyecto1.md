@@ -131,7 +131,7 @@ Continuaremos aplicando el algoritmo K-Nearest Neighbors (KNN) dado que s un alg
 
 Comenzamos ejecutando este proceso en Rapidminer
 
-![Texto alternativo](/assets/credir3.png)
+![Texto alternativo](/assets/credit3.png)
 
 1. **Retrieve Limited_Loan (Carga de datos)**  
    - **Propósito**: Cargar el dataset de préstamos previamente limitado a 10,000 filas (por restricciones de la licencia).  
