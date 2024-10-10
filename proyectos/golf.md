@@ -18,7 +18,7 @@ La idea detrás de este análisis es determinar qué condiciones meteorológicas
 ## <span style="color: #007BFF; text-align: center; display: block;">Objetivos</span>
 
 El objetivo principal de este proyecto es desarrollar modelos predictivos que permitan determinar si se va ajugar al golf en función del estado del tiempo. A través del análisis de los datos, también buscamos identificar los factores más importantes que influyen en la prediccion final. 
----
+
 ## <span style="color: #007BFF; text-align: center; display: block;">Aplicando Naive bayes</span>
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Análisis de Datos</span>
