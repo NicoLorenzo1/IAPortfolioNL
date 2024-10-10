@@ -4,92 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header>
-        <h1>¡Hola, soy Nicolas Lorenzo!</h1>
-        <p>Bienvenido a mi portfolio. Aquí puedes ver algunos de mis proyectos destacados.</p>
-    </header>
-
-    <main>
-        <!-- Sección de Información General sobre Inteligencia Artificial -->
-        <section class="ai-info">
-            <h2>Inteligencia Artificial</h2>
-            <p>
-                La inteligencia artificial (IA) es un campo de estudio de la informática que se centra en la creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Estas tareas incluyen el aprendizaje, el razonamiento, la resolución de problemas, la percepción y el uso del lenguaje.
-            </p>
-            <p>
-                La IA se divide en dos categorías: la IA débil, que se centra en tareas específicas, y la IA fuerte, que busca desarrollar sistemas que puedan razonar y entender de manera similar a un humano.
-            </p>
-            <p>
-                Entre las aplicaciones de la IA se encuentran el reconocimiento de voz, la visión por computadora, los sistemas de recomendación y los chatbots. A medida que la tecnología avanza, la IA continúa transformando diversos sectores, desde la medicina hasta el entretenimiento.
-            </p>
-        </section>
-
-        <div class="article-cards">
-            <div class="article-card">
-                <img src="https://getgenie.ai/wp-content/uploads/2022/09/How-to-use-a-AI-Summary-Generator-for-Article-to-Write-Summary.png" alt="Artículo 1" class="article-image">
-                <div class="article-content">
-                    <span class="article-category">Que es el aprendizaje supervisado y no supervisado?</span>
-                    <h3><a href="deployPage.html?file=data/aprendizaje.md" target="_blank">Que es el aprendizaje supervisado y no supervisado?</a></h3>
-                    <p>Many of you — perhaps most of you — have been sitting on the sidelines while WordPress and WP Engine [...]</p>
-                    <p class="article-author">Geoff Graham on Oct 3, 2024</p>
-                </div>
-            </div>
-            <div class="article-cards">
-                <div class="article-card">
-                    <img src="https://getgenie.ai/wp-content/uploads/2022/09/How-to-use-a-AI-Summary-Generator-for-Article-to-Write-Summary.png" alt="Artículo 1" class="article-image">
-                    <div class="article-content">
-                        <span class="article-category">Que es el aprendizaje supervisado y no supervisado?</span>
-                        <h3><a href="deployPage.html?file=data/tecnicasAprendizaje.md" target="_blank">Tecnicas de aprendizaje</a></h3>
-                        <p>Many of you — perhaps most of you — have been sitting on the sidelines while WordPress and WP Engine [...]</p>
-                        <p class="article-author">Geoff Graham on Oct 3, 2024</p>
-                    </div>
-                </div>
-
-        <!-- Sección de Proyectos -->
-        <div class="projects">
-            <div class="project-card">
-                <img src="https://storage.googleapis.com/kaggle-datasets-images/5660999/9341109/087ac2d143e6d8f54e6fbc70f917b97d/dataset-cover.jpg?t=2024-09-07-19-21-20" alt="Análisis de Sentimientos" class="project-image">
-                <h3><a href="deployPage.html?file=proyectos/proyecto1.md">Proyecto 1: Análisis de Sentimientos</a></h3>
-            </div>
-            <div class="project-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmn6beKVReAFpSz-v5pcrMa7PhGWd0w6CX8Q&s" alt="Monitoreo de Aplicaciones" class="project-image">
-                <h3><a href="deployPage.html?file=proyectos/proyectoWine.md">Proyecto wine: Analisis de origen del vino</a></h3>
-            </div>
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Main container for the header and wave animation -->
+        <div class="inner-header">
+            <h1>Portfolio de Inteligencia Artificial</h1>
+            <h2 class="author-name">Nicolas Lorenzo</h2>
         </div>
-
-       <!-- Sección de Artículos -->
-<section class="articles">
-    <h2>Últimos Artículos</h2>
-    <div class="article-cards">
-        <div class="article-card">
-            <img src="https://getgenie.ai/wp-content/uploads/2022/09/How-to-use-a-AI-Summary-Generator-for-Article-to-Write-Summary.png" alt="Artículo 1" class="article-image">
-            <div class="article-content">
-                <span class="article-category">WORDPRESS</span>
-                <h3><a href="https://ejemplo.com/articulo1" target="_blank">Catching Up on the WordPress WP Engine Stitch</a></h3>
-                <p>Many of you — perhaps most of you — have been sitting on the sidelines while WordPress and WP Engine [...]</p>
-                <p class="article-author">Geoff Graham on Oct 3, 2024</p>
-            </div>
-        </div>
-        <div class="article-card">
-            <img src="https://getgenie.ai/wp-content/uploads/2022/09/How-to-use-a-AI-Summary-Generator-for-Article-to-Write-Summary.png" alt="Artículo 2" class="article-image">
-            <div class="article-content">
-                <span class="article-category">ANCHOR POSITIONING</span>
-                <h3><a href="https://ejemplo.com/articulo2" target="_blank">CSS Anchor Positioning Guide</a></h3>
-                <p>Learn about CSS Anchor Positioning, including its syntax, properties, how it is used to position one element next to another...</p>
-                <p class="article-author">Juan Diego Rodríguez on Oct 2, 2024</p>
-            </div>
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="wave-parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
         </div>
     </div>
-</section>
+    <!-- Header ends -->
+
+    <main>
+        <!-- Sección de Artículos -->
+        <section class="articles">
+            <div class="article-cards">
+                <div class="article-card">
+                    <img src="/assets/aprendizajeAutomatico.png" alt="Artículo 1" class="article-image">
+                    <div class="article-content">
+                        <h3><a href="deployPage.html?file=data/aprendizajeAutomatico.md" target="_blank">Que son los metodos de aprendizaje automatico?</a></h3>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d0c74548c8e8f0001be73ba/1611691480783-ADP9JD9J102UNX2MTEPK/robot+aprendiendo.jpeg" alt="Artículo 2" class="article-image">
+                    <div class="article-content">
+                        <h3><a href="deployPage.html?file=data/aprendizaje.md" target="_blank">Que es el aprendizaje supervisado y no supervisado?</a></h3>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <img src="https://www.ikusi.com/mx/wp-content/uploads/sites/2/2022/11/ikusi_ikusi_image_902-2-300x200.jpg" alt="Artículo 3" class="article-image">
+                    <div class="article-content">
+                        <h3><a href="deployPage.html?file=data/tecnicasAprendizaje.md" target="_blank">Técnicas de aprendizaje</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2>Proyectos desarrollados</h2>
+
+        <!-- Sección de Proyectos -->
+        <section class="projects">
+            
+            <div class="project-card">
+                <img src="https://miro.medium.com/v2/resize:fit:2000/0*qNu5W6tX5IKaGU3V" class="project-image">
+                <h3><a href="deployPage.html?file=proyectos/proyecto1.md">Proyecto créditos: Análisis de Créditos</a></h3>
+            </div>
+            <div class="project-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFY5YXHvRYD9dXAifcv-SyE5jQf1hSaVBC2A&s" class="project-image">
+                <h3><a href="deployPage.html?file=proyectos/terremoto.md">Proyecto Terremotos: Análisis de Terremotos</a></h3>
+            </div>
+            <div class="project-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2tpl0c4r0kF5ig4zOiqgT7mMTNmLbDfAPHQ&s" class="project-image">
+                <h3><a href="deployPage.html?file=proyectos/golf.md">Proyecto Golf: Análisis de jugar al golf</a></h3>
+            </div>
+            <div class="project-card">
+                <img src="https://elplanetaurbano.com/wp-content/uploads/2023/02/Vino-IA-NF-Planeta-Urbano-2023-1.jpg" class="project-image">
+                <h3><a href="deployPage.html?file=proyectos/proyectoWine.md">Proyecto wine: Análisis de origen del vino</a></h3>
+            </div>
+        </section>
+
+        <!-- Sección de Artículos Relevantes -->
+
+        <h2>Artículos relevantes</h2>
+        <section class="articles">
+            <div class="article-cards">
+                <div class="article-card">
+                    <img src="/assets/aprendizajeAutomatico.png" alt="Artículo 4" class="article-image">
+                    <div class="article-content">
+                        <h3><a href="https://cloud.google.com/learn/what-is-machine-learning?hl=es-419#" target="_blank">Aprendizaje automático</a></h3>
+                        <p>Definición de aprendizaje automático de Google.</p>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <img src="https://www.tecnologias-informacion.com/aprend.jpg" alt="Artículo 5" class="article-image">
+                    <div class="article-content">
+                        <h3><a href="https://www.hpe.com/lamerica/es/what-is/machine-learning.html#:~:text=Los%20cuatro%20modelos%20principales%20de,y%20el%20aprendizaje%20de%20refuerzo." target="_blank">Modelos de aprendizaje</a></h3>
+                        <p>Información general y modelos de aprendizaje automático.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
+    <!-- Footer -->
     <footer class="footer">
         <p>Página web creada por <strong>Nicolas Lorenzo</strong></p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="main.js"></script>
 </body>

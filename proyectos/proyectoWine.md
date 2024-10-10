@@ -23,10 +23,11 @@ Además, el proyecto no solo busca proporcionar un modelo de clasificación para
 
 ---
 
-## <span style="color: #007BFF; text-align: center; display: block;">Análisis de Datos</span>
 
-### <span style="color: #007BFF; text-align: center; display: block;">Descripción de las Columnas del Dataset de Vinos</span>
+## <span style="color: #007BFF; text-align: center; display: block;">Análisis de Datos Aplicando Random forest </span>
 
+
+### Descripción de las Columnas del Dataset de Vinos ###
 <div style="text-align: center;">
     <table style="width: 90%; margin: 0 auto; border-collapse: collapse; text-align: left;">
         <thead>
@@ -100,6 +101,7 @@ Además, el proyecto no solo busca proporcionar un modelo de clasificación para
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Desarrollo</span>
 
+
 Comenzamos con el siguiente proceso en Rapidminer: 
 
 ![Texto alternativo](./assets/wine1.png)
@@ -135,7 +137,7 @@ Comenzamos con el siguiente proceso en Rapidminer:
 
 ![Texto alternativo](assets/wine2.png)
 
-## <span style="color: #007BFF; text-align: center; display: block;">Analisis de Random forest</span>
+## <span style="color: #007BFF; text-align: center; display: block;">Analisis final</span>
 
 El resultado final muestra un error cuadrático medio (RMSE) de 0.068, lo que indica que el modelo es bastante preciso en la predicción de la clase del vino (origen del vino). Un RMSE bajo indica que las predicciones están muy cerca de los valores reales. Esto sugiere que el modelo Random Forest ha aprendido bien las relaciones entre las características químicas del vino y su origen.
 

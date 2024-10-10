@@ -1,14 +1,14 @@
-
+<a href="../index.html" class="return-button">Regresar al inicio</a>
 
 # **Aprendizaje Supervisado y No Supervisado**
 
-El aprendizaje automático se divide en dos categorías principales: **supervisado** y **no supervisado**, cada una con características particulares y objetivos distintos.
+El aprendizaje automático se divide en dos categorías principales: supervisado y no supervisado, cada una con características particulares y objetivos distintos.
 
 ---
 
 ## **Aprendizaje Supervisado** 
 
-El **aprendizaje supervisado** es una técnica en la que el modelo aprende a partir de un conjunto de datos que ya está etiquetado. Esto significa que cada instancia del conjunto de datos tiene una entrada y una salida correspondiente. El objetivo del modelo es encontrar una función que asocie correctamente la entrada con la salida para predecir resultados en nuevos datos no etiquetados.
+El aprendizaje supervisado es una técnica en la que el modelo aprende a partir de un conjunto de datos que ya está etiquetado. Esto significa que cada instancia del conjunto de datos tiene una entrada y una salida correspondiente. El objetivo del modelo es encontrar una función que asocie correctamente la entrada con la salida para predecir resultados en nuevos datos no etiquetados.
 
 ### **Características Claves:**
 - **Datos etiquetados:** En el aprendizaje supervisado, el conjunto de datos de entrenamiento contiene pares de entrada y salida (etiquetas). Estas etiquetas guían el modelo para aprender patrones.

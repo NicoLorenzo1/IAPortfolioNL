@@ -22,10 +22,10 @@ El objetivo principal de este proyecto es desarrollar modelos predictivos que pe
 Este proyecto no solo tiene como objetivo proporcionar una herramienta útil para la evaluación de riesgos en préstamos, sino que también busca contribuir al campo de la analítica financiera mediante la creación de un modelo que pueda adaptarse y aplicarse a diferentes contextos en la industria financiera.
 
 ---
-
 ## <span style="color: #007BFF; text-align: center; display: block;">Análisis de Datos</span>
 
-### <span style="color: #007BFF; text-align: center; display: block;">Descripción de las Columnas del Dataset de Préstamos</span>
+
+### Descripción de las Columnas del Dataset de Préstamos ###
 
 | **Nombre de la columna**                       | **Descripción**                                                                                                      |
 |------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -67,14 +67,15 @@ Este proyecto no solo tiene como objetivo proporcionar una herramienta útil par
 | Puntuación de riesgo                           | La puntuación de riesgo prevista para la probabilidad de incumplimiento de cada solicitante.                        |
 
 ---
-
 ## <span style="color: #007BFF; text-align: center; display: block;">Desarrollo</span>
+
+## <span style="color: #007BFF; text-align: center; display: block;">Aplicando Regresión logística</span>
 
 Comenzamos particionando el conjunto, dado que este conjunto es bastante grande para analizar (20,000 filas), lo vamos a particionar para trabajar con un conjunto más pequeño.
 
 Para comenzar con la clasificación binaria y predecir si el crédito (LoanApproved) será aprobado o no, utilizaremos el algoritmo de Regresión Logística, dado que es adecuado para este caso.
 
-Dentro de **RapidMiner**, ejecutamos el siguiente proceso:
+Dentro de RapidMiner ejecutamos el siguiente proceso:
 
 ![Texto alternativo](./assets/credit1.png)
 
@@ -98,7 +99,7 @@ Dentro de **RapidMiner**, ejecutamos el siguiente proceso:
 
 5. **Logistic Regression (Regresión Logística)**  
    - **Propósito**: Entrenar el modelo para predecir si un préstamo será aprobado o no.  
-   - **Descripción**: Este operador entrena un modelo de regresion logistica
+   - **Descripción**: Este operador entrena un modelo de regresion logística
 
 6. **Apply model**  
    - **Propósito**: Utilizar el modelo entrenado con Regresión Logística para hacer predicciones sobre el conjunto de prueba.
@@ -109,11 +110,11 @@ Dentro de **RapidMiner**, ejecutamos el siguiente proceso:
    - **Descripción**:  Este operador evalúa el rendimiento del modelo de Regresión Logística calculando varias métricas. Estas métricas permiten medir qué tan bien el modelo predice la aprobación o rechazo de los préstamos en comparación con los valores reales del conjunto de prueba.
 
 
-## <span style="color: #007BFF; text-align: center; display: block;">Resultados obtenidos al aplicar regresión logistica</span>
+## <span style="color: #007BFF; text-align: center; display: block;">Resultados obtenidos al aplicar regresión logística</span>
 
 ![Texto alternativo](./assets/credit2.png)
 
-## <span style="color: #007BFF; text-align: center; display: block;">Analisis de la regresión logistica</span>
+## <span style="color: #007BFF; text-align: center; display: block;">Analisis de la Regresión logística</span>
 
 Este algoritmo es una opción común para problemas de clasificación binaria, ya que modela la probabilidad de que una instancia pertenezca a una de dos clases. A continuación, se evaluará su rendimiento en este contexto y se comparará con otros enfoques.
 
@@ -127,11 +128,12 @@ Préstamo aprobado: El modelo predijo correctamente los préstamos aprobados con
 Este nivel de precisión es notablemente alto, lo que puede ser un indicativo de que el modelo ha aprendido correctamente las relaciones entre las variables predictoras y la aprobación del préstamo.
 
 
+## <span style="color: #007BFF; text-align: center; display: block;">Aplicando K-Nearest Neighbors (KNN)</span>
 Continuaremos aplicando el algoritmo K-Nearest Neighbors (KNN) dado que s un algoritmo simple que no hace ninguna suposición sobre la distribución de los datos. Funciona bien cuando los datos están bien distribuidos en diferentes clases y es justo nuestro caso.
 
 Comenzamos ejecutando este proceso en Rapidminer
 
-![Texto alternativo](/assets/credit3.png)
+![Texto alternativo](./assets/credit3.png)
 
 1. **Retrieve Limited_Loan (Carga de datos)**  
    - **Propósito**: Cargar el dataset de préstamos previamente limitado a 10,000 filas (por restricciones de la licencia).  

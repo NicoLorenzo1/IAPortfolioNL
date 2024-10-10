@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* ======= Estilos Generales ======= */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
@@ -6,11 +6,11 @@ body {
     padding: 0;
 }
 
-/* Estilo del encabezado */
+/* ======= Estilos del Encabezado ======= */
 header {
     text-align: center;
     padding: 50px 20px;
-    background-color: #007ACC; /* Color de fondo */
+    background-color: #007ACC;
     color: white;
 }
 
@@ -23,30 +23,21 @@ header p {
     font-size: 1.2em;
 }
 
-/* Estilo de la sección de información sobre IA */
-.ai-info {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo de la sección de proyectos */
+/* ======= Estilos para Sección de Proyectos ======= */
 .projects {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 20px;
+    margin-bottom: 100px;
 }
 
 .project-card {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    width: 300px; /* Ancho fijo para tarjetas */
+    width: 400px;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -57,16 +48,30 @@ header p {
 
 .project-image {
     width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .project-card h3 {
     padding: 10px;
 }
 
+/* Estilo del enlace dentro de las tarjetas */
+.project-card h3 a {
+    color: #007ACC;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+.project-card h3 a:hover {
+    text-decoration: underline;
+}
+
+/* ======= Botones Generales ======= */
 button {
-    background-color: #007ACC; /* Color de fondo del botón */
+    background-color: #007ACC;
     color: white;
     border: none;
     padding: 10px;
@@ -77,87 +82,225 @@ button {
 }
 
 button:hover {
-    background-color: #005f99; /* Color al pasar el mouse */
+    background-color: #005f99;
 }
 
-
-/* Estilo del pie de página */
+/* ======= Estilos del Pie de Página ======= */
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #007ACC; /* Color de fondo */
+    background-color: #007ACC;
     color: white;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
-.project-card h3 a {
-    color: #007ACC; /* Color del enlace */
-    text-decoration: none; /* Quitar subrayado */
-}
-
-.project-card h3 a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-}
-
-
-
+/* ======= Sección de Artículos ======= */
 .articles {
     margin: 20px 0;
+    max-width: 10%;
+    flex-wrap: wrap;
+    margin-bottom: 100px ;
+
 }
 
 .article-cards {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre las tarjetas */
+    gap: 20px;
 }
 
+
 .article-card {
-    background: linear-gradient(to right, #f5f7fa, white); /* Fondo degradado */
+    background: linear-gradient(to right, #f5f7fa, white);
     border-radius: 8px;
     display: flex;
-    overflow: hidden; /* Para que la imagen no sobresalga */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s, box-shadow 0.3s; /* Añade transición */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 500%;
+}
+
+.article-card p{
+    color: #1a1a1a;
 }
 
 .article-card:hover {
-    transform: translateY(-5px); /* Levanta la tarjeta al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .article-image {
-    width: 250px; /* Ancho de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 250px;
+    height: 150px;
 }
 
 .article-content {
     padding: 15px;
-    flex-grow: 1; /* Ocupa el resto del espacio */
+    flex-grow: 1;
 }
 
+/* Estilo del texto de la categoría */
 .article-category {
     font-size: 0.9rem;
     font-weight: bold;
-    color: #007ACC; /* Color para la categoría */
+    color: #007ACC;
 }
 
+/* Estilo del enlace de los artículos */
 .article-content h3 a {
-    color: #333; /* Color del título */
-    text-decoration: none; /* Sin subrayado */
+    color: #333;
+    text-decoration: none;
 }
 
 .article-content h3 a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
+    text-decoration: underline;
 }
 
 .article-author {
     font-size: 0.8rem;
-    color: #777; /* Color del texto del autor */
+    color: #777;
 }
 
+/* ======= Ajustes Generales para Imágenes ======= */
 img {
     max-width: 100%;
     height: auto;
 }
+
+
+
+
+
+/* ======= Estilos del Header ======= */
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(-45deg, #30cfd0, #667eea, #764ba2, #330867);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+  }
+  
+  /* Ajustar el espacio y el estilo del texto dentro del header */
+  .inner-header {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Para que los elementos se coloquen verticalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Estilo para el título principal */
+  .inner-header h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 48px;
+    margin: 0; /* Eliminar el margen para que el espaciado se controle con padding */
+  }
+  
+  /* Estilo para el nombre del autor */
+  .inner-header h3.author-name {
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; /* Añadir un pequeño margen superior para dar espacio entre el título y el nombre */
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  /* Animación del fondo gradiente */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Animación para las olas */
+  .wave-parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  .wave-parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .wave-parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .wave-parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .wave-parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .inner-header h1 {
+      font-size: 32px;
+    }
+  
+    .inner-header h3.author-name {
+      font-size: 20px;
+    }
+  }
+  
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: #f1f1f1; /* Color de texto claro */
+    padding: 0;
+}
+
+
+
+.return-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007BFF; /* Fondo azul */
+  color: #fff; /* Texto blanco */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para cambios */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin-top: 20px;
+}
+
+.return-button:hover {
+  background-color: #0056b3; /* Fondo más oscuro al pasar el mouse */
+  transform: translateY(-3px); /* Efecto de "elevación" al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al pasar el mouse */
+}
+
+.return-button:active {
+  background-color: #004085; /* Fondo más oscuro al hacer clic */
+  transform: translateY(0); /* Eliminar efecto de elevación al hacer clic */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra normal al hacer clic */
+}
+
+
+
