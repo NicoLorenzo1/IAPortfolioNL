@@ -118,6 +118,6 @@ Además, como la clase "yes" es más común, el modelo puede estar algo sesgado 
 El modelo parece tener un buen rendimiento en términos generales, pero sería importante realizar evaluaciones con métricas mas detalladas.
 ---
 
-[Regresar al inicio](../index.html)
+[Regresar al inicio](https://nicolorenzo1.github.io/IAPortfolioNL/)
 
 </div>

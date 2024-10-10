@@ -148,6 +148,6 @@ El modelo de Random Forest con este proceso ha demostrado ser un algoritmo efici
 
 ---
 
-[Regresar al inicio](../index.html)
+[Regresar al inicio](https://nicolorenzo1.github.io/IAPortfolioNL/)
 
 </div>

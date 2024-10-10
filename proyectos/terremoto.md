@@ -158,6 +158,6 @@ Para la clase "true" (tsunami): 68.75% esto significa que ese porcentaje de los 
 El modelo tiene un excelente rendimiento en términos de predicción de los no tsunamis (alta precisión y sensibilidad).
 Sin embargo, tiene dificultades en la predicción de los tsunamis. Aunque tiene una precisión relativamente alta (91.67%), la sensibilidad es más baja (68.75%), lo que indica que, si bien predice correctamente la mayoría de los tsunamis que ocurren, aún hay un 31.25% de tsunamis que no detecta.
 
-[Regresar al inicio](../index.html)
+[Regresar al inicio](https://nicolorenzo1.github.io/IAPortfolioNL/)
 
 </div>
