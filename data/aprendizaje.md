@@ -1,4 +1,3 @@
-<a href="../index.html" class="return-button">Regresar al inicio</a>
 
 # **Aprendizaje Supervisado y No Supervisado**
 
