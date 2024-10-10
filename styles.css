@@ -169,10 +169,6 @@ img {
     height: auto;
 }
 
-
-
-
-
 /* ======= Estilos del Header ======= */
 .header {
     position: relative;
@@ -272,8 +268,6 @@ img {
     color: #f1f1f1; /* Color de texto claro */
     padding: 0;
 }
-
-
 
 .return-button {
   display: inline-block;
