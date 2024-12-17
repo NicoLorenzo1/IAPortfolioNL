@@ -63,7 +63,7 @@ Este proyecto no solo tiene como objetivo proporcionar una herramienta útil par
 | Tasa de interés                                | La tasa de interés final aplicada al solicitante.                                                                   |
 | Pago mensual del prestado                      | Importe mensual del reembolso del préstamo.                                                                         |
 | Relación total sobre la deuda y los ingresos   | Deuda total en relación con los ingresos mensuales.                                                                |
-| Préstamo Aprobado                              | Resultado binario que indica si el préstamo fue aprobado o no (1 = Aprobado, 0 = Denegado).                          |
+| Préstamo Aprobado                              | Resultado que indica si el préstamo fue aprobado o no (1 = Aprobado, 0 = Denegado).                          |
 | Puntuación de riesgo                           | La puntuación de riesgo prevista para la probabilidad de incumplimiento de cada solicitante.                        |
 
 ---
@@ -129,55 +129,92 @@ Este nivel de precisión es notablemente alto, lo que puede ser un indicativo de
 
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Aplicando K-Nearest Neighbors (KNN)</span>
-Continuaremos aplicando el algoritmo K-Nearest Neighbors (KNN) dado que s un algoritmo simple que no hace ninguna suposición sobre la distribución de los datos. Funciona bien cuando los datos están bien distribuidos en diferentes clases y es justo nuestro caso.
+Continuaremos aplicando el algoritmo K-Nearest Neighbors (KNN) dado que es un algoritmo simple que no hace ninguna suposición sobre la distribución de los datos. Funciona bien cuando los datos están bien distribuidos en diferentes clases y es justo nuestro caso.
 
 Comenzamos ejecutando este proceso en Rapidminer
 
-![Texto alternativo](./assets/credit3.png)
+![Texto alternativo](./assets/creditKnnProcess.png)
 
 1. **Retrieve Limited_Loan (Carga de datos)**  
    - **Propósito**: Cargar el dataset de préstamos previamente limitado a 10,000 filas (por restricciones de la licencia).  
    - **Descripción**: Este operador trae los datos del archivo que contiene la información de los solicitantes de préstamos y sus atributos, entre los cuales se incluye el atributo `LoanApproved`, que indica si el préstamo fue aprobado (1) o rechazado (0).
 
-2. **Set Role (Definir roles de atributos)**  
-   - **Propósito**: Configurar el atributo que se desea predecir (etiqueta).  
-   - **Descripción**: Este operador cambia el rol del atributo LoanApproved a label (etiqueta), que es la variable objetivo en este proceso. Las demás columnas se mantienen con el rol de atributos predictivos.
-
-3. **Numerical to Binominal (Convertir numérico a categórico)**  
+4. **Numerical to Binominal (Convertir numérico a categórico)**  
    - **Propósito**: Convertir la etiqueta numérica (1 y 0) a una categoría binaria.  
    - **Descripción**: La Regresión Logística no puede manejar etiquetas numéricas, por lo que este operador convierte el atributo `LoanApproved` de valores numéricos (0 y 1) a valores binomiales (categóricos). Esto garantiza que el modelo pueda entrenarse correctamente.
 
-4. **Split Data (Dividir los datos en entrenamiento y prueba)**  
+3. **Set Role (Definir roles de atributos)**  
+   - **Propósito**: Configurar el atributo que se desea predecir (etiqueta).  
+   - **Descripción**: Este operador cambia el rol del atributo LoanApproved a label (etiqueta), que es la variable objetivo en este proceso. Las demás columnas se mantienen con el rol de atributos predictivos.
+
+4. **Normalize**  
+   - **Propósito**: Normalizar los datos.  
+   - **Descripción**: El objetivo del operador Normalize es escalar los valores de los atributos numéricos a un rango estándar
+
+5. **Split Data (Dividir los datos en entrenamiento y prueba)**  
    - **Propósito**: Dividir el dataset en dos partes: una para entrenar el modelo y otra para evaluar su rendimiento.  
    - **Descripción**: Este operador divide los datos en dos subconjuntos:
      - **Datos de entrenamiento** (por ejemplo, el 70% de los datos) utilizados para entrenar el modelo.
      - **Datos de prueba** (por ejemplo, el 30% restante) utilizados para evaluar el modelo. En este caso, el flujo de datos se divide, enviando los datos de entrenamiento a Logistic Regression y los de prueba a Apply Model.
 
-5. **K-Nearest Neighbors (K-NN)**  
+6. **K-Nearest Neighbors (K-NN)**  
    - **Propósito**: Entrenar el modelo utilizando el algoritmo K-NN para predecir si un préstamo será aprobado o no.
    - **Descripción**: Este operador entrena un modelo utilizando el algoritmo de K-NN (K vecinos más cercanos). El modelo clasifica los datos basándose en la cercanía de una instancia a los puntos de datos vecinos en el conjunto de entrenamiento. El parámetro K define el número de vecinos a considerar para hacer la predicción. K-NN es un algoritmo simple que no hace suposiciones sobre la distribución de los datos, pero puede ser computacionalmente costoso cuando se trabaja con grandes conjuntos de datos.
 
-6. **Apply model**  
+7. **Apply model**  
    - **Propósito**: Utilizar el modelo entrenado con K-NN para hacer predicciones sobre el conjunto de prueba.
    - **Descripción**: Este operador aplica el modelo K-NN entrenado a los datos de prueba para predecir si los préstamos serán aprobados o no. Compara las predicciones con los valores reales del atributo LoanApproved para generar las predicciones sobre los datos no etiquetados del conjunto de prueba.
 
-6. **Performance**  
+8. **Performance**  
    - **Propósito**: Evaluar el rendimiento del modelo utilizando métricas de clasificación.
    - **Descripción**:  Este operador evalúa el rendimiento del modelo de K-NN calculando varias métricas. Estas métricas permiten medir qué tan bien el modelo predice la aprobación o rechazo de los préstamos en comparación con los valores reales del conjunto de prueba.
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Resultados obtenidos al aplicar K-Nearest Neighbors (K-NN)</span>
 
-![Texto alternativo](./assets/credit4.png)
+![Texto alternativo](./assets/creditKnnResult.png)
 
-## <span style="color: #007BFF; text-align: center; display: block;">Analisis de K-Nearest Neighbors (K-NN)</span>
+<p>
+La precisión global (accuracy) es 75.30%,
 
-Al comparar los resultados obtenidos al aplicar el algoritmo K-Nearest Neighbors (K-NN) con los resultados de Regresión Logística, podemos realizar
+Análisis Detallado:
 
-Rendimiento de K-Nearest Neighbors (K-NN):
-Raíz del error cuadrático medio (RMSE): El modelo K-NN nos devuelve un valor de 0.470. Este valor nos indica qué tan lejos están, en promedio, las predicciones del modelo en relación con los valores reales. Dado que estamos trabajando con un problema de clasificación binaria (aprobado o no aprobado), la RMSE mide el error de predicción continuo, aunque en este caso, deberíamos interpretar el error en términos de clasificación.
-El K-NN no es un algoritmo paramétrico, por lo que no realiza ninguna suposición sobre la distribución subyacente de los datos. Sin embargo, puede ser sensible a la elección del número de vecinos (k que en este caso fue 5) y al escalamiento de los datos.
+Clase 0 (No Aprobado):
+El modelo predijo correctamente 2248 de las 2278 instancias reales de clase 0.
+Recall (Sensibilidad): 98.68% Casi todas las instancias de la clase 0 fueron detectadas correctamente.
+Precisión: 75.97% De todas las instancias clasificadas como 0, solo el 75.97% fue correcto.
 
-Comparación con Regresión Logística:
-Precisión de Regresión Logística: El análisis con Regresión Logística mostró una precisión extremadamente alta (99.83%), con un buen equilibrio entre la capacidad de predecir tanto préstamos aprobados como rechazados. Esto sugiere que la Regresión Logística manejó bastante bien la separación de las clases dentro de los datos.
+Clase 1 (Aprobado):
+Solo 11 instancias de la clase 1 fueron clasificadas correctamente.
+El modelo cometió muchos errores, prediciendo clase 0 en lugar de clase 1.
+Recall: 1.52% el modelo apenas detectó instancias de la clase 1.
+Precisión: 26.83% las predicciones de la clase 1 tienen una baja confianza.
 
-Rendimiento de K-NN: Aunque el modelo K-NN también ofrece predicciones razonables, al observar el RMSE podemos inferir que su error es relativamente mayor en comparación con la exactitud obtenida con Regresión Logística. En este caso, una RMSE de 0.470 nos indica que el modelo tiene un margen de error en sus predicciones, lo que puede traducirse en una menor precisión en comparación con el análisis previo.
+La clase 0 tiene muchas más instancias que la clase 1, lo que hace que el modelo esté sesgado hacia predecir la clase mayoritaria (0).
+Esto explica el alto recall para la clase 0 y el bajo recall para la clase 1.
+
+</p>
+
+## <span style="color: #007BFF; text-align: center; display: block;">Analisis General de aplicar K-NN y regresión logística</span>
+
+Resultados obtenidos al aplicar el algoritmo K-Nearest Neighbors (K-NN) con los resultados de Regresión Logística:
+
+Regresión Logística:
+
+Precisión General: 99.83%, lo que indica un rendimiento casi perfecto en la clasificación.
+Recall y Precisión:
+La clase 0 (No aprobado) y la clase 1 (Aprobado) tienen recall y precisión extremadamente altos (casi 100%).
+El modelo logra un buen balance entre ambas clases y no presenta sesgo hacia la clase mayoritaria.
+
+K-Nearest Neighbors (K-NN):
+Precisión General: 75.30%, lo que significa que el modelo tuvo un desempeño moderado al clasificar los préstamos.
+Recall Clase 0: 98.68%, el modelo detecta bien las instancias de la clase mayoritaria (No aprobado).
+Recall Clase 1: 1.52%, el modelo no logra identificar correctamente las instancias de la clase minoritaria (Aprobado).
+Sesgo hacia la clase mayoritaria: La mayoría de las predicciones del modelo son clase 0, debido al desbalance de clases.
+
+Conclusión:
+La Regresión Logística es muy eficiente para este problema, debido a su naturaleza lineal y la capacidad de manejar bien las características de los datos.
+
+## <span style="color: #007BFF; text-align: center; display: block;">Conclusión final</span>
+Para este caso, lo mejor es utilizar la regresión logistica dado que muestra una precisión extremadamente alta y logra un buen equilibrio entre ambas clases además de que es un modelo muy sencillo y rápido.
+Aún asi, el modelo K-NN tiene un rendimiento aceptable en la clase mayoritaria, su incapacidad para detectar la clase minoritaria lo hace menos adecuado para este problema. Cabe destacar que se podrían realizar algunos ajustes en los parametros del algoritmo KNN y ver si mejora su rendimiento.
+

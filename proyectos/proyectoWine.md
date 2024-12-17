@@ -104,49 +104,72 @@ Además, el proyecto no solo busca proporcionar un modelo de clasificación para
 
 Comenzamos con el siguiente proceso en Rapidminer: 
 
-![Texto alternativo](./assets/wine1.png)
+![Texto alternativo](./assets/wineProcess.png)
 
 1. **Retrieve (Carga de datos)**  
    - **Propósito**: Cargar el dataset de vinos.
    - **Descripción**:  Este operador carga el archivo de datos que contiene las diferentes características químicas y físicas de los vinos, entre las cuales se incluye la clase (Class), que indica el origen de cada vino.
 
-2. **Set Role (Definir roles de atributos)**  
+2. **Numerical to polynomial**  
+   - **Propósito**: Pasar la variable objetivo (class) a polynomial.
+   - **Descripción**: Esto se realiza ya que para aplicar random forest como clasificacion la variable a predecir debe ser de tipo polynomial y en nuestro caso estaba definida como numerica.  
+
+3. **Set Role (Definir roles de atributos)**  
    - **Propósito**: Configurar el atributo que se desea predecir (etiqueta).  
    - **Descripción**: Este operador cambia el rol del atributo Class a label (etiqueta), que es la variable objetivo en este proceso. Las demás columnas se mantienen con el rol de atributos predictivos, tales como Alcohol, Malic acid, entre otros.
 
-3. **Split Data (Dividir los datos en entrenamiento y prueba)**  
+4. **Split Data (Dividir los datos en entrenamiento y prueba)**  
    - **Propósito**: Dividir el dataset en dos partes: una para entrenar el modelo y otra para evaluar su rendimiento.  
    - **Descripción**: Este operador divide los datos en dos subconjuntos:
      - **Datos de entrenamiento** (por ejemplo, el 70% de los datos) utilizados para entrenar el modelo.
      - **Datos de prueba** (por ejemplo, el 30% restante) utilizados para evaluar el modelo. En este caso, el flujo de datos se divide, enviando los datos de entrenamiento a random forest y los de prueba a Apply Model.
 
-4. **Random forest**  
+5. **Random forest**  
    - **Propósito**: Entrenar el modelo utilizando el algoritmo Random Forest para predecir el origen del vino.
    - **Descripción**: Este operador entrena un modelo utilizando el algoritmo de Random Forest. Random Forest crea múltiples árboles de decisión a partir de diferentes subconjuntos de los datos y combina sus predicciones para obtener una predicción final más robusta y precisa. Cada árbol de decisión es entrenado utilizando un subconjunto de atributos y registros, lo que reduce la varianza y mejora la precisión de la predicción final. Este algoritmo es especialmente útil cuando los datos contienen muchas características y puede manejar bien tanto datos balanceados como desbalanceados.
 
-5. **Apply model**  
+6. **Apply model**  
    - **Propósito**: Utilizar el modelo entrenado con Random Forest para hacer predicciones sobre el conjunto de prueba.
    - **Descripción**:  Este operador aplica el modelo de Random Forest entrenado a los datos de prueba para predecir el origen del vino. Compara las predicciones generadas por el modelo con los valores reales del atributo Class para generar las predicciones sobre los datos no etiquetados del conjunto de prueba.
 
-6. **Performance**  
+7. **Performance**  
    - **Propósito**: Evaluar el rendimiento del modelo utilizando métricas de clasificación.
    - **Descripción**:  Este operador evalúa el rendimiento del modelo de Random Forest calculando varias métricas de clasificación. Estas métricas permiten medir qué tan bien el modelo predice correctamente el origen del vino en comparación con los valores reales del conjunto de prueba. Random Forest es conocido por su capacidad para evitar el sobreajuste y, a menudo, produce mejores resultados en comparación con otros modelos más simples como K-NN o Regresión Logística.
 
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Resultados obtenidos al aplicar Random forest</span>
 
-![Texto alternativo](assets/wine2.png)
+![Texto alternativo](assets/wineResult.png)
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Analisis final</span>
 
-El resultado final muestra un error cuadrático medio (RMSE) de 0.068, lo que indica que el modelo es bastante preciso en la predicción de la clase del vino (origen del vino). Un RMSE bajo indica que las predicciones están muy cerca de los valores reales. Esto sugiere que el modelo Random Forest ha aprendido bien las relaciones entre las características químicas del vino y su origen.
+Resumen de Resultados:
+
+Clase 1:
+19 instancias clasificadas correctamente.
+Recall: 100% (todas las instancias reales de Clase 1 fueron detectadas).
+Precision: 100% (todo lo predicho como Clase 1 fue correcto).
+
+Clase 2:
+18 instancias clasificadas correctamente.
+1 error: 1 instancia de Clase 2 fue mal clasificada como Clase 3.
+Recall: 94.74% (18/19 instancias reales detectadas).
+Precision: 100% (todas las instancias predichas como Clase 2 fueron correctas).
+
+Clase 3:
+15 instancias clasificadas correctamente.
+Recall: 100% (todas las instancias reales de Clase 3 fueron detectadas).
+Precision: 93.75% (1 instancia fue mal clasificada como Clase 3, pero no lo era).
+
+El modelo clasificó correctamente el 98.11% de todas las instancias del conjunto de prueba.
 
 
 ## <span style="color: #007BFF; text-align: center; display: block;">Conclusión</span>
+<p>
+El modelo Random Forest muestra un excelente rendimiento, con una precisión global de 98.11%. La mayoría de las clases son clasificadas correctamente, aunque existe un pequeño error en la Clase 2, donde una instancia fue clasificada incorrectamente como Clase 3.
 
-El modelo de Random Forest con este proceso ha demostrado ser un algoritmo eficiente y preciso para predecir la clase de origen del vino basado en sus características químicas y físicas.
-
----
+Si este resultado en un futuro se quisiera mejorar aún más, se podria ajustar los parámetros de Random Forest (como el número de árboles) o probar con algun otro algoritmo como ser SVM para comparar resultados y quedarnos con el mejor.
+</p>
 
 [Regresar al inicio](https://nicolorenzo1.github.io/IAPortfolioNL/)
 
