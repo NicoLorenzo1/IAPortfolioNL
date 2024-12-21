@@ -325,7 +325,7 @@ El gráfico muestra cómo se compone cada cluster en términos de género para e
 Si ciertos clusters tienen un género predominante para un interés, esto podría indicar una fuerte correlación entre ese género y el interés. En clusters con ambos géneros presentes, se podría analizar si el interés resulta igualmente atractivo para todos o si existen diferencias en la proporción de usuarios.  
 
 
-### Conclusión
+# Conclusión
 
 Este caso de estudio demostró cómo se puede utilizar el algoritmo K-Means para segmentar a los usuarios de redes sociales en función de sus intereses comunes y otras características clave, como la edad y el género. Una segmentación efectiva es esencial para personalizar las experiencias de los usuarios y optimizar las recomendaciones, lo que mejora significativamente la interacción y la satisfacción del usuario. 
 
